@@ -78,7 +78,7 @@ services:
       - /path/to/your/data:/app/data
     environment:
       - DUMBBUDGET_PIN=##### #From 5 to 10 PIN numbers.
-      - CURRENCY=AUD #Define preferrd currency here
+      - CURRENCY=AUD #Define preferred currency here
       - BASE_URL=http://localhost:3005
     restart: on-failure:5
 ```
