@@ -64,6 +64,8 @@ docker run -d \
 ```
 
 ### Using Docker Compose / Portainer (to build from GitHub)
+
+```bash
 services:
   dumbbudget:
     build:
@@ -71,14 +73,15 @@ services:
     pull_policy: build
     container_name: DumbBudget
     ports:
-      - 3005:3000
+      - 3000:3000
     volumes:
-      - /srv/data/app-data/dumbbudget:/app/data
+      - /path/to/your/data:/app/data
     environment:
       - DUMBBUDGET_PIN=##### #From 5 to 10 PIN numbers.
       - CURRENCY=AUD #Define preferrd currency here
       - BASE_URL=http://localhost:3005
     restart: on-failure:5
+```
     
 > **Note**: Replace `/path/to/your/data` with the actual path where you want to store your transaction data on the host machine.
 
