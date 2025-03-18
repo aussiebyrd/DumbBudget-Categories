@@ -472,7 +472,7 @@ function initModalHandling() {
     // Update amount input placeholder with current currency symbol
     function updateAmountPlaceholder() {
         const currencyInfo = SUPPORTED_CURRENCIES[currentCurrency] || SUPPORTED_CURRENCIES.USD;
-        amountInput.placeholder = `Amount (${currencyInfo.symbol})`;
+        amountInput.placeholder = `  Amount (${currencyInfo.symbol})`;
     }
 
     // Open modal
@@ -484,9 +484,9 @@ function initModalHandling() {
         toggleBtns.forEach(btn => {
             btn.classList.toggle('active', btn.dataset.type === 'expense');
         });
-        // Hide category field for income by default - commented out as expense is initial default
-        // categoryField.style.display = 'none';
-        // currentTransactionType = 'income';
+        // Show category field for expense by default - commented out as expense is initial default
+        categoryField.style.display = 'block';
+        currentTransactionType = 'expense';
         
         // Set today's date as default
         const today = new Date().toISOString().split('T')[0];
