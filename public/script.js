@@ -467,7 +467,7 @@ function initModalHandling() {
     const toggleBtns = document.querySelectorAll('.toggle-btn');
     const amountInput = document.getElementById('amount');
 
-    let currentTransactionType = 'income';
+    let currentTransactionType = 'expense';
 
     // Update amount input placeholder with current currency symbol
     function updateAmountPlaceholder() {
