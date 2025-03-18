@@ -482,7 +482,7 @@ function initModalHandling() {
         transactionForm.reset();
         // Reset toggle buttons
         toggleBtns.forEach(btn => {
-            btn.classList.toggle('active', btn.dataset.type === 'income');
+            btn.classList.toggle('active', btn.dataset.type === 'expense');
         });
         // Hide category field for income by default
         categoryField.style.display = 'none';
