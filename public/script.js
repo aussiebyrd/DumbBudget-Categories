@@ -484,9 +484,9 @@ function initModalHandling() {
         toggleBtns.forEach(btn => {
             btn.classList.toggle('active', btn.dataset.type === 'expense');
         });
-        // Hide category field for income by default
-        categoryField.style.display = 'none';
-        currentTransactionType = 'income';
+        // Hide category field for income by default - commented out as expense is initial default
+        // categoryField.style.display = 'none';
+        // currentTransactionType = 'income';
         
         // Set today's date as default
         const today = new Date().toISOString().split('T')[0];
