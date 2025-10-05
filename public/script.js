@@ -685,11 +685,11 @@ function initModalHandling() {
         transactionForm.reset();
         // Reset toggle buttons
         toggleBtns.forEach(btn => {
-            btn.classList.toggle('active', btn.dataset.type === 'income');
+            btn.classList.toggle('active', btn.dataset.type === 'expense');
         });
-        // Hide category field for income by default
-        categoryField.style.display = 'none';
-        currentTransactionType = 'income';
+        // Hide category field for expense by default
+        categoryField.style.display = 'block';
+        currentTransactionType = 'expense';
         
         // Reset recurring options
         document.getElementById('recurring-checkbox').checked = false;
